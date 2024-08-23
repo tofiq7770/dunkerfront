@@ -38,6 +38,38 @@
       crossorigin="anonymous" />
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <style>
+          .review img {
+    width: 50px;
+    height: 50px;
+}
+
+.stars span {
+    font-size: 20px;
+}
+.form-control {
+    border-radius: 0;
+    border: 1px solid #ddd;
+}
+
+.btn-outline-success {
+    border: 1px solid #ffb600;
+    color: #ffb600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-success:hover {
+    background-color: #ffb600;
+    color: white;
+}
+
+#rating span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+    </style>
   </head>
   <body>
     <!-- Header Section Start -->
@@ -530,14 +562,9 @@
                   </li>
                   <li class="tab-item">
                     <a href="#" class="tab-link" data-tab="additional-info">
-                      ADDITIONAL INFORMATION
-                    </a>
-                  </li>  
-                   <li class="tab-item">
-                    <a href="#" class="tab-link" data-tab="additional-info">
                       Reviews (0)
                     </a>
-                  </li>
+                  </li>   
                 </ul>
               </div>
               <div class="tabs-content pt-4" id="tabContent">
@@ -556,35 +583,82 @@
                 </div>
                 <div class="tab d-none" data-tab="additional-info">
                   <div class="product-stats">
-                    <div class="sku">
-                      <span>WEIGHT:</span>
-                      <a href="#">0.4 kg</a>
-                    </div>
-                    <div class="category">
-                      <span>DIMENSIONS:</span>
-                      <a href="#">60 × 40 × 120 cm</a>
-                    </div>
+                    <div class="container mt-5">
+                      <div class="review">
+                          <div class="d-flex align-items-start">
+                              <img src="./assets/img/banner1.jpg" style="width: 70px;height: 70px;" alt="User Avatar" class="rounded-circle mr-3">
+                              <div>
+                                  <p class="mb-1 text-muted">April 12, 2024</p>
+                                  <h5 class="font-weight-bold mb-1">Jason Smith</h5>
+                                  <p>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. Suspendisse ultricies nisi vel quam suscipit.</p>
+                                  <div class="stars">
+                                      <span class="text-warning">&#9733;</span>
+                                      <span class="text-warning">&#9733;</span>
+                                      <span class="text-warning">&#9733;</span>
+                                      <span class="text-warning">&#9733;</span>
+                                      <span class="text-secondary">&#9733;</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+              
+                      <div class="review mt-4">
+                          <div class="d-flex align-items-start">
+                              <img src="./assets/img/banner1.jpg" style="width: 70px;height: 70px;" alt="User Avatar" class="rounded-circle mr-3">
+                              <div>
+                                  <p class="mb-1 text-muted">April 12, 2024</p>
+                                  <h5 class="font-weight-bold mb-1">Sam Peters</h5>
+                                  <p>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. Suspendisse ultricies nisi vel quam suscipit.</p>
+                                  <div class="stars">
+                                      <span class="text-warning">&#9733;</span>
+                                      <span class="text-warning">&#9733;</span>
+                                      <span class="text-warning">&#9733;</span>
+                                      <span class="text-secondary">&#9733;</span>
+                                      <span class="text-secondary">&#9733;</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                </div>
-                <!-- <div class="tab d-none" data-tab="reviews">
-                  <div class="product-stats">
-                    <div class="sku">
-                      <span>dcsddw:</span>
-                      <a href="#">0.4 kg</a>
-                    </div>
-                    <div class="category">
-                      <span>DIMENSIONS:</span>
-                      <a href="#">60 × 40 × 120 cm</a>
-                    </div>
                   </div>
-                </div> -->
+                </div> 
               </div>
             </div>
           </div>
         </div>
+        <div class="container mt-5">
+          <h2 class="mb-4">Leave a Reply</h2>
+          <form>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                      <label for="name">Your Name *</label>
+                      <input type="text" class="form-control" id="name" placeholder="Your Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                      <label for="email">Your Email *</label>
+                      <input type="email" class="form-control" id="email" placeholder="Your Email">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="review">Your Review *</label>
+                  <textarea class="form-control" id="review" rows="4" placeholder="Your Review"></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="rating">Please rate:</label>
+                  <div id="rating">
+                      <span class="text-secondary">&#9733;</span>
+                      <span class="text-secondary">&#9733;</span>
+                      <span class="text-secondary">&#9733;</span>
+                      <span class="text-secondary">&#9733;</span>
+                      <span class="text-secondary">&#9733;</span>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-outline-success">Post Comment</button>
+          </form>
+      </div>
+  
       </section>
       <!-- Detail Product Section End -->
-
       <!-- Related Products Section Start -->
       <section id="related-products">
         <div class="title">
